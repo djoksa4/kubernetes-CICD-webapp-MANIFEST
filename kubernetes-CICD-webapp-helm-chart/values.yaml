@@ -1,0 +1,12 @@
+replicaCount: 2
+
+image:
+  repository: djoksa4/kubernetes-cicd-webapp
+  tag: 202407221718
+
+service:
+  name: kubernetes-CICD-webapp
+  type: NodePort
+  externalPort: 8080  # Port exposed outside the cluster
+  internalPort: 8080  # Port the container listens on
+  nodePort: 30001  # Port in the range 30000-32767
