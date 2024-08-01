@@ -1,0 +1,29 @@
+replicaCount: 2
+
+image:
+  repository: djoksa4/kubernetes-cicd-webapp
+  pullPolicy: IfNotPresent
+  tag: "202407221718"
+
+service:
+  type: NodePort
+  externalPort: 8080
+  internalPort: 8080
+  nodePort: 30001
+
+ingress:
+  enabled: false
+
+resources: {}
+
+livenessProbe:
+  httpGet:
+    path: /
+    port: 8080
+readinessProbe:
+  httpGet:
+    path: /
+    port: 8080
+
+autoscaling:
+  enabled: false
