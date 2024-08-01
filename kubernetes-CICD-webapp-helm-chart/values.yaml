@@ -5,7 +5,7 @@ image:
   tag: 202407221718
 
 service:
-  name: kubernetes-CICD-webapp
+  name: kubernetes-cicd-webapp
   type: NodePort
   externalPort: 8080  # Port exposed outside the cluster
   internalPort: 8080  # Port the container listens on

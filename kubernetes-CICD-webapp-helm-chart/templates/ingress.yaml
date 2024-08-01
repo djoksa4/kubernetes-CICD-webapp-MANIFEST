@@ -13,7 +13,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "kubernetes-CICD-webapp.fullname" . }}
+                name: {{ include "kubernetes-cicd-webapp.fullname" . }}
                 port:
                   number: {{ .Values.service.externalPort }}
   {{- with .Values.ingress.tls }}

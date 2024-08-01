@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "kubernetes-CICD-webapp.fullname" . }}
+  name: {{ include "kubernetes-cicd-webapp.fullname" . }}
   labels:
-    app: {{ include "kubernetes-CICD-webapp.name" . }}
+    app: {{ include "kubernetes-cicd-webapp.name" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "kubernetes-CICD-webapp.name" . }}
+      app: {{ include "kubernetes-cicd-webapp.name" . }}
   template:
     metadata:
       labels:
-        app: {{ include "kubernetes-CICD-webapp.name" . }}
+        app: {{ include "kubernetes-cicd-webapp.name" . }}
     spec:
       containers:
-        - name: {{ include "kubernetes-CICD-webapp.name" . }}
+        - name: {{ include "kubernetes-cicd-webapp.name" . }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           ports:
             - containerPort: {{ .Values.service.internalPort }}

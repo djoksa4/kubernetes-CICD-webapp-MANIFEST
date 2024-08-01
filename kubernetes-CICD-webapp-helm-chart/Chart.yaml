@@ -1,4 +1,4 @@
 apiVersion: v2
-name: kubernetes-CICD-webapp
+name: kubernetes-cicd-webapp
 description: A Helm chart for Kubernetes
 version: 0.1.0
