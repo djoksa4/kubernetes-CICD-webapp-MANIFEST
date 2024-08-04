@@ -3,7 +3,7 @@ replicaCount: 3
 image:
   repository: djoksa4/kubernetes-cicd-webapp
   pullPolicy: IfNotPresent
-  tag: "202408041528"
+  tag: "202408041532"
 
 service:
   type: NodePort
